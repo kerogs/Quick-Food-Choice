@@ -79,6 +79,6 @@ Distributed under the MPL-2.0 License. See `LICENSE` for more information.
 For any questions, feel free to open an issue.
 
 <p align="center">
-  <img align="center" src="../.ksinf/fivestv.png" width="100" />
+  <img align="center" src="../.ksinf/fivestv.jpg" width="100" />
   <img align="center" src="../.ksinf/kslabs.png" width="100" /> 
 </p>

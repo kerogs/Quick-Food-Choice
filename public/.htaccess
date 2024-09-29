@@ -2,6 +2,4 @@ ErrorDocument 404 /error/404.php
 
 RewriteEngine On
 
-RewriteRule ^admin/(.*)$ admin/$1.php
-RewriteRule ^cook/(.*)$ cook/$1.php
-RewriteRule ^customer/(.*)$ customer/$1.php
+RewriteRule ^dashboard$ dashboard.php [L]

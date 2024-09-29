@@ -1,4 +1,6 @@
 {
-    "adminPassword": "kerogs",
-    "theme":"dark"
+    "theme":"dark",
+    "admin":{
+        "password":"kerogs"
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 // require_once('../config.php');
+session_start();
 
 $serverConfig = json_decode(file_get_contents('../backend/serverConfig.json'), true);
 
@@ -12,21 +13,39 @@ switch ($serverConfig["theme"]) {
     case 'light':
         file_exists('src/css/login_light.css') ? $cssPath = '<link rel="stylesheet" href="src/css/login_light.css">' : $cssPath = '<link rel="stylesheet" href="src/css/login.css">';
         break;
+    case 'kslabs':
+        file_exists('src/css/login_kslabs.css') ? $cssPath = '<link rel="stylesheet" href="src/css/login_kslabs.css">' : $cssPath = '<link rel="stylesheet" href="src/css/login.css">';
     default:
         file_exists('src/css/login.css') ? $cssPath = '<link rel="stylesheet" href="src/css/login.css">' : $cssPath = '<link rel="stylesheet" href="src/css/login_light.css">';
         break;
 }
 
+if (isset($_POST['role'])) {
+    $role = trim(htmlspecialchars($_POST['role']));
+    $id = htmlspecialchars($_POST['id']);
+
+    if($role == 'admin'){
+        if($id === $serverConfig["admin"]["password"]){
+            $_SESSION['loginType'] = 'admin';
+            header('Location: dashboard');
+            exit();
+        } else{
+            header('Location: /?id=invalid');
+            exit();
+        }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
-<html lang="<?= $kpf_config["seo"]["lang_short"] ?>">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once '../inc/head.php' ?>
-    <title><?= $kpf_config["seo"]["title_short"] ?></title>
+    <title>QFC | Login</title>
     <?= $cssPath ?>
 
     <!-- src -->
@@ -60,9 +79,13 @@ switch ($serverConfig["theme"]) {
                 document.querySelector(".buttonList").style.display = "none";
                 document.querySelector(".topbuttonlist").style.display = "flex";
 
+                if(document.querySelector("#errorReport")){
+                    document.querySelector("#errorReport").style.display = "none";
+                }
+
                 if (role == 'customer') {
                     formShow.innerHTML = `
-                            <form action="">
+                            <form action="" method="post">
                                 <div class="group">
                                     <label for="">Table Number</label>
                                     <input type="number" name="id" id="" minlength="1" maxlength="3" required>
@@ -74,8 +97,8 @@ switch ($serverConfig["theme"]) {
                 }
                 if (role == 'cook') {
                     formShow.innerHTML = `
-                    <form action="">
-                        <div class="group">
+                    <form action="" method="post">
+                        <div class="group" >
                             <label for="">Account ID</label>
                             <input type="password" name="id" minlength="8" maxlength="10" id="" required>
                             <input type="hidden" name="role" value="cook"/>
@@ -83,12 +106,12 @@ switch ($serverConfig["theme"]) {
                         <button type="submit">Submit</button>
                     </form>`;
                 }
-                if(role == 'admin') {
+                if (role == 'admin') {
                     formShow.innerHTML = `
-                    <form action="">
-                        <div class="group">
+                    <form action="" method="post">
+                        <div class="group" >
                             <label for="">Password</label>
-                            <input type="password" name="id" minlength="8" maxlength="16" id="" required>
+                            <input type="password" name="id" minlength="6" maxlength="16" id="" required>
                             <input type="hidden" name="role" value="admin"/>
                         </div>
                         <button type="submit">Submit</button>
@@ -96,6 +119,11 @@ switch ($serverConfig["theme"]) {
                 }
             }
         </script>
+
+        <?php if($_GET['id'] == 'invalid') : ?>
+            <p id="errorReport" style="color:red;background-color:#ff000020;padding:10px;border-radius:10px;width:100%;">Authentication error, false value</p>
+        <?php endif ?>
+
 
     </div>
     <?php require_once '../inc/script.php' ?>

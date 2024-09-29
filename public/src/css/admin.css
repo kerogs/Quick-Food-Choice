@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background-color: #4f29f0;
+  color: hsl(220, 13%, 9%);
+}
+
+body {
+  background-color: hsl(220, 13%, 9%);
+  color: #c3c8de;
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Space Grotesk", Arial sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  flex: 1 !important;
+  width: 100%;
+  padding: 20px;
+}
+
+.header {
+  background-color: #4f29f0;
+  padding: 20px;
+  text-align: center;
+}
+
+aside {
+  width: 250px;
+  background-color: hsl(220, 13%, 13%);
+  color: #c3c8de;
+  padding: 10px;
+}
+aside nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+aside nav ul li {
+  color: #c3c8de;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+aside nav ul li:hover {
+  color: #fff;
+  background-color: hsl(220, 13%, 9%);
+}
+aside nav ul li.active {
+  color: #fff;
+  background-color: hsl(220, 13%, 9%);
+  border: 1px solid #4f29f0;
+}
+aside nav ul hr {
+  margin: 10px 0;
+  border: 1px solid #c3c8de;
+}
+
+section.cadre {
+  padding: 10px;
+  border: 2px solid hsl(220, 13%, 17%);
+}
+
+form.littleForm {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+form.littleForm input, form.littleForm button {
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(220, 13%, 13%);
+  color: #c3c8de;
+  font-size: 16px;
+  flex: 1;
+  outline: none;
+  border: 1px solid hsl(220, 13%, 13%);
+}
+form.littleForm input:valid ~ button {
+  border: 1px solid #0f9d58;
+  color: #fff;
+}
+form.littleForm input:valid {
+  color: #0f9d58;
+}
+form.littleForm button {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  margin-top: 10px;
+}
+table thead {
+  background-color: hsl(220, 13%, 17%);
+  color: #fff;
+}
+table th, table td {
+  padding: 12px;
+  text-align: left;
+}
+table tr:nth-child(even) {
+  background-color: hsl(220, 13%, 13%);
+}
+table tr:hover {
+  background-color: hsl(220, 13%, 11%);
+}
+table button {
+  border: none;
+  background-color: hsl(220, 13%, 17%);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+table button.delete {
+  background-color: #ff0000;
+}
+table button.delete:hover {
+  background-color: #cc0000;
+}/*# sourceMappingURL=admin.css.map */

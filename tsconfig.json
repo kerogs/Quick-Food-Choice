@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "public/dist/local/js/",
+        "noEmitOnError": true,
+        "target": "ES6"
+    },
+    "include": [
+        "public/src/ts/**/*.ts",
+        "public/src/ts/*.ts",
+    ]
+}

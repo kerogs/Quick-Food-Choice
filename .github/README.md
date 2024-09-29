@@ -1,6 +1,6 @@
 # Quick Food Choice
 <div align="center">
-    <img alt="" src=".ksinf/logo.png" height="130px">
+    <img alt="" src="../.ksinf/logo.png" height="130px">
     <h3>Quick Food Choice</h3>
     <em>Web application for managing food orders in local events or networks</em>
 </div>
@@ -79,6 +79,6 @@ Distributed under the MPL-2.0 License. See `LICENSE` for more information.
 For any questions, feel free to open an issue.
 
 <p align="center">
-  <img align="center" src=".ksinf/fivestv.png" width="100" />
-  <img align="center" src=".ksinf/ksinf.png" width="100" /> 
+  <img align="center" src="../.ksinf/fivestv.png" width="100" />
+  <img align="center" src="../.ksinf/kslabs.png" width="100" /> 
 </p>

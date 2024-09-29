@@ -42,7 +42,7 @@ As an administrator, you can:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/KSInfinite/quickfoodchoice.git
+    git clone https://github.com/kerogs/quickfoodchoice.git
     ```
 2. Navigate to the project directory:
     ```bash

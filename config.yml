@@ -4,10 +4,10 @@
 
 # SEO Configuration
 seo:
-  title: "KerogsPHP Framework"
-  title_short: "KsPHP Framework"
-  description: "KerogsPHP Framework. The framework for all your development needs."
-  keywords: "KerogsPHP, PHP, Framework, website, html, css, easy, best, KerogsPHP Framework, kpf"
+  title: "Quick Food Choice"
+  title_short: "QFC"
+  description: "Webapp-based order management application for restaurants. "
+  keywords: "Web-based, Webapp, App, food, Quick FOOD Choice, order, management, application, restaurants."
   author: "Kerogs"
   lang: "English"
   lang_short: "en"

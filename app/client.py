@@ -45,7 +45,7 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     # URL du site web que vous voulez afficher
-    site_url = 'https://www.example.ksnetcom'  # Remplacez par une URL valide
+    site_url = 'http://localhost'  # Remplacez par une URL valide
 
     # HTML par défaut à afficher pendant le chargement
     default_html = """<!doctype html>

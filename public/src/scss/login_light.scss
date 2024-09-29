@@ -1,0 +1,174 @@
+$background: hsl(220, 13%, 9%);
+$background2: hsl(220, 13%, 13%);
+$background3: hsl(220, 13%, 17%);
+$primary: #4f29f0;
+$text: #c3c8de;
+
+$background: hsl(229, 29%, 82%);
+$background2: hsl(229, 29%, 86%);
+$background3: hsl(220, 13%, 90%);
+$primary: #4f29f0;
+$text: hsl(220, 13%, 9%);
+
+$orange: #9b5703;
+$blue: #3a7bd5;
+$green: #0f9d58;
+$red: #ff0000;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::selection {
+        background-color: $primary;
+        color: $background;
+    }
+}
+
+body {
+    background-color: $background;
+    color: $text;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    overflow: hidden;
+    height: 100vh;
+
+    font-family: 'Space Grotesk', Arial sans-serif;
+}
+
+.ccenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 700px;
+}
+
+.buttonList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+        font-size: 20px;
+        padding: 6px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: $background2;
+        color: $text;
+        cursor: pointer;
+        width: 100%;
+
+        &:hover {
+            &:nth-child(1) {
+                background-color: $primary;
+            }
+
+            &:nth-child(2) {
+                background-color: $orange;
+            }
+
+            &:nth-child(3) {
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+.topbuttonlist {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+    button{
+        font-size: 20px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: $background2;
+        color: $text;
+        cursor: pointer;
+        width: 100%;
+
+        &:hover {
+            &:nth-child(1) {
+                background-color: $primary;
+            }
+    
+            &:nth-child(2) {
+                background-color: $orange;
+            }
+    
+            &:nth-child(3) {
+                background-color: $blue;
+            }
+        }
+    }
+
+
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+#formShow {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: $background2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        input {
+            padding: 6px;
+            border: none;
+            border-radius: 5px;
+            background-color: $background;
+            color: $text;
+
+            &:invalid {
+                border: 1px solid $red;
+            }
+
+            &:valid {
+                border: 1px solid $green;
+            }
+
+            outline: none;
+
+            &:focus {
+                background-color: $background3;
+            }
+        }
+    }
+
+    button {
+        font-size: 20px;
+        padding: 6px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: $green;
+        color: $text;
+        cursor: pointer;
+    }
+}

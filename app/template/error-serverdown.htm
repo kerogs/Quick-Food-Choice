@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickFoodChoice | Error</title>
+</head>
+
+<body>
+
+    <style>
+        :root {
+            --background: #62abff;
+            --front-color: #4f29f0;
+            --back-color: #c3c8de;
+            --text-color: #414856;
+        }
+
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .ccenter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .error h1 {
+            color: var(--front-color);
+        }
+
+        .error p {
+            margin: 10px 0 30px 0;
+            font-size: 20px;
+        }
+
+        .bugreport{
+            background-color: #4f29f020;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .bugreport > p{
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bolder;
+            margin: 0 0 10px 0;
+        }
+    </style>
+
+    <div class="ccenter">
+        <div class="error">
+            <h1>Problem occurred.</h1>
+            <p>An error has occurred. Please notify an employee</p>
+        </div>
+
+        <div class="bugreport">
+            <p>Error details</p>
+            <div id="buginfo">
+                <p>The application cannot contact the web server.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

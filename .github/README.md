@@ -64,6 +64,9 @@ As an administrator, you can:
 
 Contributions are welcome! Follow these steps to contribute:
 
+> [!NOTE]
+> See first CODE_OF_CONDUCT ! for contribution.
+
 1. Fork the repository.
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`).
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).

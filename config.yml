@@ -24,7 +24,7 @@ labs:
 
 # Other
 other:
-  website_version: 1.0.0
+  website_version: 1.1-sh1
 
 framework:
   framework_version: 2.3.1-sh6

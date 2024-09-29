@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background-color: #4f29f0;
+  color: hsl(220, 13%, 9%);
+}
+
+body {
+  background-color: hsl(220, 13%, 9%);
+  color: #c3c8de;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Space Grotesk", Arial sans-serif;
+}
+
+.ccenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+}
+
+.buttonList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.buttonList button {
+  font-size: 20px;
+  padding: 6px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(220, 13%, 13%);
+  color: #c3c8de;
+  cursor: pointer;
+  width: 100%;
+}
+.buttonList button:hover:nth-child(1) {
+  background-color: #4f29f0;
+}
+.buttonList button:hover:nth-child(2) {
+  background-color: #9b5703;
+}
+.buttonList button:hover:nth-child(3) {
+  background-color: #3a7bd5;
+}
+
+.topbuttonlist {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.topbuttonlist button {
+  font-size: 20px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(220, 13%, 13%);
+  color: #c3c8de;
+  cursor: pointer;
+  width: 100%;
+}
+.topbuttonlist button:hover:nth-child(1) {
+  background-color: #4f29f0;
+}
+.topbuttonlist button:hover:nth-child(2) {
+  background-color: #9b5703;
+}
+.topbuttonlist button:hover:nth-child(3) {
+  background-color: #3a7bd5;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+#formShow {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: hsl(220, 13%, 13%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+form .group input {
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(220, 13%, 9%);
+  color: #c3c8de;
+  outline: none;
+}
+form .group input:invalid {
+  border: 1px solid #ff0000;
+}
+form .group input:valid {
+  border: 1px solid #0f9d58;
+}
+form .group input:focus {
+  background-color: hsl(220, 13%, 17%);
+}
+form button {
+  font-size: 20px;
+  padding: 6px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #0f9d58;
+  color: #c3c8de;
+  cursor: pointer;
+}/*# sourceMappingURL=login.css.map */
